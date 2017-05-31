@@ -1,0 +1,147 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+/*reset reset.css*/
+.title{
+	margin-top: .75rem;
+}
+.desc-visi{
+	visibility: hidden;
+}
+.container{
+	background-image: url(../image/defaultBg.jpg);
+}
+
+.stage{
+	width: 100%;
+    height: 100%;
+    margin-top: .86rem;
+    box-sizing: border-box;
+    text-align: center;
+	.dis-area{
+		width: 100%;
+		height: 3.1rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
+	.ans-area{
+		@extend .dis-area;
+	}
+	.show-area{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	    width: 5.77rem;
+		height: .7rem;
+	    padding: 0 .6rem;
+	    border-radius: .7rem;
+	    background-color: #56a200;
+	    border: .06rem solid #fff;
+	    box-sizing: border-box;
+	    margin-left: 50%;
+    	transform: translate(-50%);
+    	.stu-name{
+    		font-size: .24rem;
+    		font-weight: 600;
+    		color: #fff;
+    		line-height: .6rem;
+    		margin: 0 .1rem;
+    	}
+	}
+}
+.sele-img{
+	width: 2.2rem;
+	height: 2.2rem;
+	background: #fff;
+	background-size: 100% 100%;
+	border: .1rem transparent solid;
+	// opacity: 0.4;
+	border-radius: .8rem;
+	overflow: hidden;
+	box-shadow: 0 0.32rem 0.38rem 0rem rgba(0,0,0,.15);
+	margin: 0 .17rem;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+	p{
+		width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    line-height: 2.2rem;
+	    font-size: 1.52rem;
+	    font-weight: 600;
+	    color: #bfbfbf;
+	}
+}
+.ans-area{
+	.sele-area{
+		width: 2.4rem;
+    	height: 2.2rem;
+    	margin: 0 .17rem;
+		.sele-img{
+			cursor: pointer;
+		}
+	}
+}
+.sele-audio{
+	width: .9rem;
+    height: .9rem;
+    margin-left: .95rem;
+	margin-top: -.5rem;
+	cursor: pointer;
+    img{
+    	width: 100%;
+    	height: 100%
+    }
+}
+.num-area-active{
+	border: .1rem #7cc628 solid;
+	opacity: 1;
+}
+.sele-p{
+	opacity: 0.6;
+}
+// .t-stage{
+// 	margin-top: .5rem;
+// }
+.visi-hide{
+	visibility: hidden;
+}
+.sele-hover{
+	position: relative;
+	top: -.1rem;
+}
+/*animate*/
+
+@keyframes shakeUp{
+	0% {
+        transform: translateX(10px);
+    }
+    20% {
+        transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(10px);
+    }
+    60% {
+        transform: translateX(-10px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.shake{
+	animation: shakeUp 0.3s both ease-in;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=1800">
+    <title>T4-12(<%= new Date().getFullYear()%>-<%= new Date().getMonth()+1 %>-<%= new Date().getDate() %>)</title>
+    <script src="../../jquery-2.1.1.min.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="/assets/js/jquery/2.1.1/jquery.min.js"><\/script>');
+        } 
+    </script>
+    <script src="js/sdk.js?v=<%=new Date().getTime()%>"></script>
+    <script src="js/fit.js?v=<%=new Date().getTime()%>"></script>
+    <link rel="stylesheet" href="css/index.css?v=<%=new Date().getTime()%>">
+</head>
+<body>
+<div class="container" id="container" data-syncresult="show-result-1">
+
+    <section class="commom">
+        <div class="desc hide"></div>
+        <div class="title">
+            <h3 class="hide"></h3>
+        </div> 
+    </section>
+
+    <section class="stu hide">
+
+        <article>
+            <div class="article-box no-scroll">
+                <span class="article"></span>
+            </div>
+            <span class="article-btn">
+                <span class="btn-up" data-syncactions="scroll-btn-1"><img src="./image/scroll.png" alt=""></span>
+                <span class="btn-down" data-syncactions="scroll-btn-2"><img src="./image/scroll.png" alt=""></span>
+            </span>
+            <span class="sound" id="sound" data-syncactions="audio-1">
+                <img src="./image/sound.png" alt="">
+                <audio src=""></audio>
+            </span>
+        </article>
+
+        <section class="problem-area">
+            <ul class="pic"></ul>
+            <div class="lineBox" id="lineBox"></div>
+            <ul class="answers"></ul>
+        </section>
+
+    </section>
+    
+    <section class="tea hide">
+        <div id="tg"></div>
+        <div class="show-result"></div>
+        <article>
+            <div class="article-box no-scroll">
+                <span class="article"></span>
+            </div>
+            <span class="article-btn">
+                <span class="btn-up" data-syncactions="scroll-btn-1"><img src="./image/scroll.png" alt=""></span>
+                <span class="btn-down" data-syncactions="scroll-btn-2"><img src="./image/scroll.png" alt=""></span>
+            </span>
+            <span class="sound" id="sound" data-syncactions="audio-1">
+                <img src="./image/sound.png" alt="">
+                <audio src=""></audio>
+            </span>
+        </article>
+
+        <section class="problem-area">
+            <ul class="pic"></ul>
+            <div class="lineBox" id="lineBox"></div>
+            <ul class="answers"></ul>
+        </section>
+    </section>
+
+</div>
+<script type="text/javascript" src="content.js?v=<%=new Date().getTime()%>"></script>
+<script type="text/javascript" src="js/index.js?v=<%=new Date().getTime()%>"></script>
+</body>
+</html>

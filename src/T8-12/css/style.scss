@@ -1,0 +1,79 @@
+@import "../../common/scss/common.scss";
+@import "./common.scss";
+@mixin position-abs {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+ }
+ .layout-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height:1.2rem;
+      font-size: 0;
+      bottom: -.5rem;
+      text-align: center;
+    .layout-squ{
+      width: 1.2rem;
+      height: 1.20rem;
+      display: inline-block;
+      border: .08rem solid white;
+      background-color: #b4df3f;
+      border-radius: .4rem;
+      line-height: 1.12rem;
+      color: white;
+      font-size: initial;
+      box-sizing: border-box;
+      margin: .1rem;
+    }
+ }
+
+.answer{
+  &.error{
+    .layout-squ{
+      background-color:#ff4a4a;
+    }
+  }
+  &.right{
+    .layout-squ{
+      background-color:#b4df3f;
+    }
+  }
+}
+.layout-bottom {
+     position: absolute;
+     left: 0;
+     right: 0;
+     height:1.2rem;
+     font-size: 0;
+     bottom: -.5rem;
+     text-align: center;
+   .layout-squ{
+     width: 1.2rem;
+     height: 1.20rem;
+     display: inline-block;
+     border: .08rem solid white;
+     background-color: #b4df3f;
+     border-radius: .4rem;
+     line-height: 1.12rem;
+     color: white;
+     font-size: initial;
+     box-sizing: border-box;
+     margin: .1rem;
+   }
+}
+
+.answer{
+ &.error{
+   .layout-squ{
+     background-color:#ff4a4a;
+   }
+ }
+ &.right{
+   .layout-squ{
+     background-color:#b4df3f;
+   }
+ }
+}

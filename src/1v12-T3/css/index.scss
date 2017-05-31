@@ -1,0 +1,114 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+.container{
+	background-image:url('../image/bg.jpg');
+}
+.desc-sec{
+	height: 0.76rem;
+}
+.theme-pic{
+	box-sizing: border-box;
+	@include setEle(7.8rem,2.66rem,3.6rem,3.6rem);
+	border: 0.12rem #fff solid;
+	border-radius: 1.12rem;
+	overflow: hidden;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.btn-audio{
+	@include setEle(9rem,5.56rem,1.2rem,1.2rem);
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.not-allowed{
+	cursor:not-allowed;
+}
+.btn-options{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 0.48rem;
+	color: #57a300;
+	.list-num{
+		background: #fff;
+		border-radius: 100%;
+		text-align: center;
+		line-height: 1.2rem;
+		cursor: pointer;
+	}
+	.option,.stu-names{
+		box-sizing: border-box;
+		background: #fff;
+		border-radius: 1.2rem;
+		padding: 0 0.2rem;
+		cursor: pointer;
+	}
+	.stu-names{
+		text-align: center;
+		line-height: 1.2rem;
+	}
+	.option{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.f30{
+		font-size: 0.3rem;
+	}
+	.stu-names{
+		background: rgba(255,255,255,0.7)
+	}
+	li:nth-child(1){
+		.list-num,.icon-judgement{
+			@include setEle(1.1rem,7rem,1.2rem,1.2rem);
+		}
+		.option,.stu-names{
+			@include setEle(2.4rem,7rem,6.7rem,1.2rem);
+		}
+	}
+	li:nth-child(2){
+		.list-num,.icon-judgement{
+			@include setEle(10.1rem,7rem,1.2rem,1.2rem);
+		}
+		.option,.stu-names{
+			@include setEle(11.4rem,7rem,6.7rem,1.2rem);
+		}
+	}
+	li:nth-child(3){
+		.list-num,.icon-judgement{
+			@include setEle(1.1rem,8.8rem,1.2rem,1.2rem);
+		}
+		.option,.stu-names{
+			@include setEle(2.4rem,8.8rem,6.7rem,1.2rem);
+		}
+	}
+	li:nth-child(4){
+		.list-num,.icon-judgement{
+			@include setEle(10.1rem,8.8rem,1.2rem,1.2rem);
+		}
+		.option,.stu-names{
+			@include setEle(11.4rem,8.8rem,6.7rem,1.2rem);
+		}
+	}
+}
+.icon-judgement.right{
+	background: url('../image/icon-right.png') center center;
+	background-size: 100% 100%;
+	display: block;
+}
+.icon-judgement.wrong{
+	background: url('../image/icon-wrong.png') center center;
+	background-size: 100% 100% ;
+	display: block;
+}

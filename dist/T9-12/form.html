@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>from-style</title>
+	<link rel="stylesheet" href="form/css/style.css">
+	<link rel="stylesheet" href="form/js/QuillEditor/quill.snow.css">
+	<script src='form/js/jquery-2.1.0.js'></script>
+	<script src='form/js/vue.min.js'></script>
+		<script src='form/js/QuillEditor/quill.js'></script>
+</head>
+<body>
+	<div id="container">
+		<div class="edit-form">
+
+			<div class="h-title">T09-连笔拼写</div>
+
+
+			<div class="c-group">
+				<div class="c-title">背景/标题</div>
+
+				<div class="c-area upload img-upload radio-group">
+
+					<div class="field-wrap">
+						<label class="field-label"  for="">上传图片</label><label for="bg-upload" class="btn btn-show upload" v-if="configData.bg==''?true:false">上传</label><label  for="bg-upload" class="btn upload re-upload" v-if="configData.bg!=''?true:false">重新上传</label><span class='txt-info'>（尺寸：1920X1080）</span>
+						<input type="file"  v-bind:key="Date.now()" class="btn-file" id="bg-upload" size="1920*1080" volume="100" accept=".gif,.jpg,.jpeg,.png" v-on:change="imageUpload($event,configData,'bg')">
+						<div class="field-tools" v-if="configData.isAnswer!==undefined?true:false">
+							<div class="field-radio-wrap radio ">
+								<div class="circle radio-outer " v-bind:class="{ active:configData.isAnswer }" v-on:click="configData.isAnswer= !configData.isAnswer">
+									<div class="circle radio-inner pos-center" ></div>
+								</div>
+								<label class='field-label' for="">正确答案</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="img-preview" v-if="configData.bg!=''?true:false">
+						<img v-bind:src="configData.bg" alt=""/>
+						<div class="img-tools">
+							<span class="btn btn-delete" v-on:click="configData.bg=''">删除</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="c-area">
+					<label>标题 （显示位置：1）</label>
+					<input type="text" class='c-input-txt' placeholder="请在此输入描述" v-model="configData.desc">
+				</div>
+			</div>
+
+			<div class="c-group">
+				<div class="c-title">添加TG</div>
+				<div class="c-area">
+					<div class="c-well" v-for="(item,index) in configData.tg">
+						<div class="well-title">
+							<p>TG {{index+1}}</p>
+							<span class="dele-tg-btn" v-on:click="deleTg(item)"></span>
+						</div>
+						<div class="well-con">
+							<label>标题</label>
+							<input type="text" class='c-input-txt' placeholder="请在此输入TG标题" v-model="item.title">
+							<label>内容 <em>&nbsp;&nbsp;需换行位置输入“&lt;br&gt;”符号</em></label>
+							<textarea name="" cols="56" rows="2" placeholder="请在此输入TG内容" v-model="item.content"></textarea>
+						</div>
+					</div>
+					<button type="button" class="add-tg-btn" v-on:click="addTg" >+</button>
+				</div>
+			</div>
+
+			<div class="c-group">
+				<div class="c-title">编辑问题</div>
+				<div class="c-area upload img-upload">
+					<label>问题 （显示位置：2）字符：≤60</label>
+					<input type="text" class='c-input-txt' placeholder="请在此输入问题" maxlength="60" v-model="configData.source.title">
+				</div>
+			</div>
+
+			<div class="c-group">
+				<div class="c-title">编辑句子</div>
+				<div class="c-area upload img-upload">
+					<label>句子 （显示位置：3）*使用下划线工具，标记需要选填的字母</label>
+					<div id="QuillEditor"></div>
+					<div id="QuillEditor-toolbar"></div>
+				</div>
+			</div>
+
+			<button class="send-btn" v-on:click="onSend">提交</button>
+		</div>
+		<div class="edit-show">
+			<div class="show-fixed">
+				<div class="show-img">
+					<img src="form/img/preview.jpg?v=1494988102321" alt="">
+				</div>
+				<ul class="show-txt">
+					<li><em>图片格式：</em>JPG/PNG/GIF</li>
+					<li><em>声音格式：</em>MP3/WAV</li>
+					<li><em>视频格式：</em>MP4</li>
+					<li>带有“ * ”号为必填项</li><br>
+					<li><em>编辑句子说明：</em></li>
+					<li>1、前端模版自动展现的字母，不加下划线。</li>
+					<li>2、合计字符长度≤52（不含标点符号）。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script src='form/js/form.js?v=1494988102321'></script>
+</html>

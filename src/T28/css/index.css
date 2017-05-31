@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Fri May 12 2017 16:00:35 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+/*reset reset.css*/
+.coantainer {
+  position: relative; }
+
+.tg {
+  z-index: 100; }
+
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.title {
+  height: 1.85rem;
+  margin-top: 0; }
+
+.title h3 {
+  margin: 0.3rem 0; }
+
+.mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: transparent;
+  display: none; }
+
+.tea .mask {
+  display: block; }
+
+.stu-stage {
+  width: 100%;
+  height: 100%; }
+
+.tea-stage {
+  width: 100%;
+  height: 100%; }
+
+.tea .tea-stage .textArea {
+  height: 6.4rem; }
+  .tea .tea-stage .textArea .upbtn {
+    top: 2.7rem; }
+  .tea .tea-stage .textArea .downbtn {
+    bottom: 2.7rem; }
+  .tea .tea-stage .textArea .textContain .text p {
+    line-height: 0.69rem; }
+
+.quesTitle {
+  width: 100%;
+  height: 1.3rem;
+  line-height: 1.3rem; }
+  .quesTitle p {
+    font-size: 0.7rem; }
+
+.quesArea {
+  width: 17.2rem;
+  height: 7.6rem;
+  margin: 0 auto; }
+  .quesArea .textArea {
+    width: 7.6rem;
+    height: 7.6rem;
+    float: left;
+    position: relative;
+    padding: 0.38rem 0.52rem 0.38rem 0.2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #fff;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15); }
+    .quesArea .textArea .btn {
+      width: 0.48rem;
+      height: 0.48rem;
+      position: absolute;
+      right: 0.05rem;
+      display: none;
+      z-index: 100;
+      border-radius: 100%;
+      font-size: 0.2rem;
+      text-indent: -1000rem; }
+    .quesArea .textArea .upbtn {
+      top: 3.2rem;
+      background-image: url("../image/up_btn.png");
+      background-size: 0.5rem;
+      background-position: -0.01rem -0.01rem; }
+    .quesArea .textArea .downbtn {
+      bottom: 3.2rem;
+      background-image: url("../image/down.png");
+      background-size: 0.5rem;
+      background-position: -0.01rem -0.01rem; }
+    .quesArea .textArea .textContain {
+      width: 100%;
+      height: 100%;
+      font-size: 0.3rem;
+      text-align: left;
+      overflow: hidden;
+      position: relative; }
+      .quesArea .textArea .textContain .text {
+        position: absolute;
+        left: 0;
+        top: 0rem; }
+        .quesArea .textArea .textContain .text p {
+          text-indent: 0.75rem;
+          line-height: 0.69rem; }
+  .quesArea .ques {
+    width: 9.1rem;
+    height: 7.6rem;
+    float: left;
+    padding-left: 0.5rem; }
+    .quesArea .ques .textQues {
+      width: 9.1rem;
+      height: 2.6rem;
+      padding: 0.36rem;
+      text-align: left;
+      font-size: 0.3rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background: #fff;
+      border-radius: 0.5rem;
+      -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+              box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+      overflow: hidden; }
+      .quesArea .ques .textQues .ques-logo span {
+        padding: 0.03rem 0.2rem;
+        border-radius: 0.225rem;
+        background: #57a300;
+        color: #fff;
+        text-align: center;
+        font-size: 0.3rem;
+        font-weight: 600;
+        letter-spacing: 0.02rem; }
+      .quesArea .ques .textQues .QuesShow {
+        width: 8.3rem;
+        height: 1.43rem;
+        display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-pack: center; }
+    .quesArea .ques .optionsList {
+      width: 9.1rem;
+      height: 5rem;
+      font-family: Arial;
+      font-weight: 700;
+      font-size: .3rem;
+      color: #57a300;
+      position: relative; }
+      .quesArea .ques .optionsList ul {
+        list-style: none; }
+        .quesArea .ques .optionsList ul li {
+          list-style: none; }
+          .quesArea .ques .optionsList ul li .answerIcon {
+            border-radius: 100%;
+            display: none; }
+          .quesArea .ques .optionsList ul li .ansRight {
+            background-image: url("../image/icon-right.png");
+            background-size: 1rem;
+            background-position: 0rem 0rem;
+            display: block;
+            z-index: 100; }
+          .quesArea .ques .optionsList ul li .ansWrong {
+            background-image: url("../image/icon-wrong.png");
+            background-size: 1rem;
+            background-position: 0rem 0rem;
+            display: block;
+            z-index: 100; }
+          .quesArea .ques .optionsList ul li .optionsText {
+            line-height: 1rem;
+            border-radius: 100%;
+            color: #57a300;
+            text-align: center;
+            -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+                    box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+            background: #fff; }
+          .quesArea .ques .optionsList ul li .ans-line {
+            display: box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+                align-items: center;
+            -webkit-box-align: center;
+            -webkit-box-pack: center;
+            background: #fff;
+            border-radius: 0.5rem;
+            padding: 0 0.2rem;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+                    box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15); }
+        .quesArea .ques .optionsList ul li:nth-child(1) .ans-line {
+          position: absolute;
+          left: 1.1rem;
+          top: 0.4rem;
+          width: 8rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(1) .optionsText, .quesArea .ques .optionsList ul li:nth-child(1) .answerIcon {
+          position: absolute;
+          left: 0rem;
+          top: 0.4rem;
+          width: 1rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(2) .ans-line {
+          position: absolute;
+          left: 1.1rem;
+          top: 1.6rem;
+          width: 8rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(2) .optionsText, .quesArea .ques .optionsList ul li:nth-child(2) .answerIcon {
+          position: absolute;
+          left: 0rem;
+          top: 1.6rem;
+          width: 1rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(3) .ans-line {
+          position: absolute;
+          left: 1.1rem;
+          top: 2.8rem;
+          width: 8rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(3) .optionsText, .quesArea .ques .optionsList ul li:nth-child(3) .answerIcon {
+          position: absolute;
+          left: 0rem;
+          top: 2.8rem;
+          width: 1rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(4) .ans-line {
+          position: absolute;
+          left: 1.1rem;
+          top: 4rem;
+          width: 8rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:nth-child(4) .optionsText, .quesArea .ques .optionsList ul li:nth-child(4) .answerIcon {
+          position: absolute;
+          left: 0rem;
+          top: 4rem;
+          width: 1rem;
+          height: 1rem; }
+        .quesArea .ques .optionsList ul li:hover {
+          border-color: green; }
+        .quesArea .ques .optionsList ul .liEnd {
+          background: green; }
+
+quesArea:before, .quesArea:after {
+  display: "table";
+  content: ""; }
+
+.quesArea:after {
+  clear: both; }
+
+.stu-list {
+  width: 7.6rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: 0.5rem;
+  padding: 0 0.2rem;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.6rem;
+  -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #b4b4b5;
+  display: flex;
+  visibility: hidden; }
+
+.stuNameList {
+  font-size: 0.3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center; }
+  .stuNameList .userAns {
+    padding: 0 0.04rem; }
+
+.not-click {
+  cursor: not-allowed; }
+
+.tea .options {
+  cursor: not-allowed; }
+
+.right {
+  color: #57a300; }
+
+.wrong {
+  color: #f50b0b; }

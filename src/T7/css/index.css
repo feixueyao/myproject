@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Fri May 12 2017 14:35:32 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+/*reset reset.css*/
+.title {
+  margin-top: .75rem; }
+
+.desc-visi {
+  visibility: hidden; }
+
+.container {
+  background-image: url(../image/defaultBg.jpg); }
+
+.stage {
+  width: 100%;
+  height: 100%;
+  margin-top: .86rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center; }
+  .stage .dis-area, .stage .ans-area {
+    width: 100%;
+    height: 3.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .stage .show-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 5.77rem;
+    height: .7rem;
+    padding: 0 .6rem;
+    border-radius: .7rem;
+    background-color: #56a200;
+    border: .06rem solid #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%); }
+    .stage .show-area .stu-name {
+      font-size: .24rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: .6rem;
+      margin: 0 .1rem; }
+
+.sele-img {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #fff;
+  background-size: 100% 100%;
+  border: .1rem transparent solid;
+  border-radius: .8rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.32rem 0.38rem 0rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.32rem 0.38rem 0rem rgba(0, 0, 0, 0.15);
+  margin: 0 .17rem; }
+  .sele-img img {
+    width: 100%;
+    height: 100%; }
+  .sele-img p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1.52rem;
+    font-weight: 600;
+    color: #bfbfbf; }
+
+.ans-area .sele-area {
+  width: 2.4rem;
+  height: 2.2rem;
+  margin: 0 .17rem; }
+  .ans-area .sele-area .sele-img {
+    cursor: pointer; }
+
+.sele-audio {
+  width: .9rem;
+  height: .9rem;
+  margin-left: .95rem;
+  margin-top: -.5rem;
+  cursor: pointer; }
+  .sele-audio img {
+    width: 100%;
+    height: 100%; }
+
+.num-area-active {
+  border: .1rem #7cc628 solid;
+  opacity: 1; }
+
+.sele-p {
+  opacity: 0.6; }
+
+.t-stage {
+  margin-top: .5rem; }
+
+.visi-hide {
+  visibility: hidden; }
+
+.sele-hover {
+  position: relative;
+  top: -.1rem; }
+
+/*animate*/
+@-webkit-keyframes shakeUp {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  20% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  40% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  60% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+@keyframes shakeUp {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  20% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  40% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  60% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+.shake {
+  -webkit-animation: shakeUp 0.3s both ease-in;
+          animation: shakeUp 0.3s both ease-in; }

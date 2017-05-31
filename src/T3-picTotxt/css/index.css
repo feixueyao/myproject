@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Wed May 10 2017 20:33:36 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+.container {
+  background-image: url("../image/bg.jpg"); }
+
+.desc-sec {
+  height: 0.76rem; }
+
+.theme-pic {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 7.8rem;
+  top: 2.66rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 0.12rem #fff solid;
+  border-radius: 1.12rem;
+  overflow: hidden; }
+  .theme-pic img {
+    width: 100%;
+    height: 100%; }
+
+.btn-audio {
+  position: absolute;
+  left: 9rem;
+  top: 5.56rem;
+  width: 1.2rem;
+  height: 1.2rem; }
+  .btn-audio img {
+    width: 100%;
+    height: 100%; }
+
+.not-allowed {
+  cursor: not-allowed; }
+
+.btn-options {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 0.48rem;
+  color: #57a300; }
+  .btn-options .list-num {
+    background: #fff;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1.2rem;
+    cursor: pointer; }
+  .btn-options .option, .btn-options .stu-names {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 0 0.2rem;
+    cursor: pointer; }
+  .btn-options .stu-names {
+    text-align: center;
+    line-height: 1.2rem; }
+  .btn-options .option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .btn-options .f30 {
+    font-size: 0.3rem; }
+  .btn-options .stu-names {
+    background: rgba(255, 255, 255, 0.7); }
+  .btn-options li:nth-child(1) .list-num, .btn-options li:nth-child(1) .icon-judgement {
+    position: absolute;
+    left: 1.1rem;
+    top: 7rem;
+    width: 1.2rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(1) .option, .btn-options li:nth-child(1) .stu-names {
+    position: absolute;
+    left: 2.4rem;
+    top: 7rem;
+    width: 6.7rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(2) .list-num, .btn-options li:nth-child(2) .icon-judgement {
+    position: absolute;
+    left: 10.1rem;
+    top: 7rem;
+    width: 1.2rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(2) .option, .btn-options li:nth-child(2) .stu-names {
+    position: absolute;
+    left: 11.4rem;
+    top: 7rem;
+    width: 6.7rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(3) .list-num, .btn-options li:nth-child(3) .icon-judgement {
+    position: absolute;
+    left: 1.1rem;
+    top: 8.8rem;
+    width: 1.2rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(3) .option, .btn-options li:nth-child(3) .stu-names {
+    position: absolute;
+    left: 2.4rem;
+    top: 8.8rem;
+    width: 6.7rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(4) .list-num, .btn-options li:nth-child(4) .icon-judgement {
+    position: absolute;
+    left: 10.1rem;
+    top: 8.8rem;
+    width: 1.2rem;
+    height: 1.2rem; }
+  .btn-options li:nth-child(4) .option, .btn-options li:nth-child(4) .stu-names {
+    position: absolute;
+    left: 11.4rem;
+    top: 8.8rem;
+    width: 6.7rem;
+    height: 1.2rem; }
+
+.icon-judgement.right {
+  background: url("../image/icon-right.png") center center;
+  background-size: 100% 100%;
+  display: block; }
+
+.icon-judgement.wrong {
+  background: url("../image/icon-wrong.png") center center;
+  background-size: 100% 100%;
+  display: block; }

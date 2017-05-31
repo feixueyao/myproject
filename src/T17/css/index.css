@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Thu May 18 2017 15:50:37 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+.container {
+  background-image: url(../image/defaultBg.jpg); }
+
+.desc-visi {
+  visibility: hidden; }
+
+.tg {
+  z-index: 999; }
+
+.title {
+  height: 1.3rem; }
+
+.stu {
+  width: 100%;
+  height: 100%; }
+
+.tea {
+  width: 100%;
+  height: 100%; }
+
+.stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0; }
+  .stage .dis-area {
+    position: absolute;
+    left: 1.45rem;
+    top: 0.35rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: .12rem #fff solid;
+    background: #faf6e0;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15); }
+    .stage .dis-area img {
+      width: 100%;
+      height: 100%; }
+  .stage .ans-area, .stage .ansBot-area {
+    position: absolute;
+    left: 9.85rem;
+    top: 0.35rem;
+    width: 2.06rem;
+    height: 2.06rem;
+    line-height: 2.06rem;
+    border: .12rem transparent solid;
+    background: transparent;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    text-align: center; }
+    .stage .ans-area img, .stage .ansBot-area img {
+      vertical-align: middle; }
+    .stage .ans-area i, .stage .ansBot-area i {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+  .stage .ansBot-area {
+    background: #fff;
+    border: .12rem #fff solid;
+    -webkit-box-shadow: 0 0.32rem 0.38rem 0rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.32rem 0.38rem 0rem rgba(0, 0, 0, 0.15); }
+
+.ansButton-area {
+  width: 2.06rem;
+  height: 2.06rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 15.45rem;
+  top: 5.63rem; }
+  .ansButton-area .ans-btn {
+    width: 2.14rem;
+    height: 1.04rem;
+    border: 0.08rem #fff solid;
+    border-radius: 1.04rem;
+    background: #cdcdcd;
+    text-align: center;
+    line-height: 1.04rem;
+    color: #fff;
+    font-size: 0.48rem;
+    font-weight: 600;
+    cursor: pointer; }
+  .ansButton-area .allowSub {
+    background: #59a500; }
+
+.showName-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 2.06rem;
+  height: 2.06rem;
+  position: absolute;
+  left: 15.45rem;
+  top: 5.63rem;
+  border: .12rem #fff solid;
+  background: #fff;
+  border-radius: 0.8rem; }
+  .showName-area .stuNameList {
+    width: 100%;
+    line-height: 0.4rem;
+    color: #cccccc;
+    font-size: .24rem;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.stuName-active {
+  color: #55a000 !important; }
+
+.cover {
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none; }

@@ -1,0 +1,319 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+
+/*reset reset.css*/
+.coantainer{
+    position:relative;
+}
+.tg{z-index:100;}
+.desc{
+	overflow: hidden; text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.title{
+	height:1.85rem;
+	margin-top:0;
+}
+.title h3{
+	margin: 0.3rem 0;
+}
+ .mask{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	background:transparent;
+	display:none;
+}
+.tea .mask{
+    display:block;
+}
+.stu-stage{
+	width: 100%;
+    height: 100%;
+}
+.tea-stage{
+	width: 100%;
+    height: 100%;
+}
+.tea{
+	.tea-stage{
+		.textArea{
+			height:6.4rem;
+			.upbtn{
+				top:2.7rem;	
+			}
+			.downbtn{
+				bottom:2.7rem;
+			}
+			.textContain{
+				.text{
+					p{
+		                line-height:0.69rem;
+					}
+				}	
+			}
+		}
+	}
+}
+
+.quesTitle{
+    width:100%;
+    height:1.3rem;
+    line-height:1.3rem;
+    p{
+		font-size:0.7rem;
+	}
+}
+.quesArea{
+	width: 17.2rem;
+	height: 7.6rem;
+	margin:0 auto;
+	.textArea{
+    	width: 7.6rem;
+    	height: 7.6rem;
+    	float: left;
+    	position:relative;
+    	padding:0.38rem 0.52rem 0.38rem 0.2rem;
+    	box-sizing:border-box;
+    	background:#fff;
+    	border-radius:0.5rem;
+    	box-shadow:0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+    		.btn{
+				width:0.48rem;
+				height:0.48rem;
+				position:absolute;
+				right:0.05rem;
+				display:none;
+				z-index:100;
+				border-radius:100%;
+				font-size:0.2rem;
+				text-indent:-1000rem;
+			}
+			.upbtn{
+				top:3.2rem;	
+				background-image:url('../image/up_btn.png');
+				background-size: 0.5rem;
+				background-position:-0.01rem -0.01rem;
+
+			}
+			.downbtn{
+				bottom:3.2rem;
+				background-image:url('../image/down.png');
+				background-size: 0.5rem;
+				background-position:-0.01rem -0.01rem;
+			}
+    	.textContain{
+	    	width: 100%;
+	    	height: 100%;
+	    	font-size: 0.3rem;
+			text-align: left;
+			overflow:hidden;
+			position:relative;
+			.text{
+				position:absolute;
+				left:0;
+				top:0rem;
+				p{
+					text-indent: 0.75rem;
+                    line-height:0.69rem;
+				}
+			}
+		}
+	}
+	.ques{
+    	width:9.1rem;
+    	height: 7.6rem;
+    	float: left;
+    	padding-left:0.5rem;
+    	.textQues{
+	    	width:9.1rem;
+	    	height: 2.6rem;
+	    	padding:0.36rem;
+	    	text-align: left;
+	    	font-size: 0.3rem;
+	    	box-sizing:border-box;
+            background:#fff;
+            border-radius:0.5rem;
+    		box-shadow:0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+            overflow:hidden;
+            .ques-logo{
+            	span{
+            	padding:0.03rem 0.2rem;	
+            	border-radius:0.225rem;
+            	background: #57a300;
+            	color:#fff;
+            	text-align:center;
+            	font-size:0.3rem;
+            	font-weight:600;
+            	letter-spacing:0.02rem;
+            	}
+            }
+            .QuesShow{
+           	 	width:8.3rem;
+            	height:1.43rem;
+            	display:block;
+    			display: flex;
+				align-items: center;
+				-webkit-box-align: center;
+				-webkit-box-pack: center;
+            }
+		}
+		.optionsList{
+			width:9.1rem;
+			height:5rem;
+            font-family: Arial;
+		    font-weight: 700;
+		    font-size: .3rem;
+		    color: #57a300;
+		    position:relative;
+	    	ul{
+				list-style: none;
+
+				li{
+					list-style:none;
+					.answerIcon{
+						border-radius:100%;
+						display:none;
+					}
+					.ansRight{
+						background-image:url('../image/icon-right.png');
+						background-size: 1rem;
+						background-position: 0rem 0rem;
+						display:block;
+						z-index:100;
+					}
+					.ansWrong{
+						background-image:url('../image/icon-wrong.png');
+						background-size: 1rem;
+						background-position: 0rem 0rem;
+						display:block;
+						z-index:100;
+					}
+					.optionsText{
+					    line-height:1rem;
+					    border-radius:100%;
+					    color:#57a300;
+					    text-align:center;
+					    box-shadow:0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+					    background:#fff;
+					}
+					.ans-line{
+						display:box;
+						display: flex;
+						align-items: center;
+						-webkit-box-align: center;
+						-webkit-box-pack: center;
+						background:#fff;
+						border-radius:0.5rem;
+						padding:0 0.2rem;
+						box-sizing:border-box;
+						box-shadow:0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+					}
+					.answer{
+					}
+				}
+				li:nth-child(1) {
+					.ans-line{
+						@include setEle(1.1rem,0.4rem,8rem,1rem);
+					}
+					.optionsText ,.answerIcon{
+						@include setEle(0rem,0.4rem,1rem,1rem);
+					}
+
+				}
+				li:nth-child(2){
+					.ans-line{
+						@include setEle(1.1rem,1.6rem,8rem,1rem);
+					}
+					.optionsText,.answerIcon{
+						@include setEle(0rem,1.6rem,1rem,1rem);
+					}
+				} 
+				li:nth-child(3){
+					.ans-line{
+						@include setEle(1.1rem,2.8rem,8rem,1rem);
+					}
+					.optionsText,.answerIcon{
+						@include setEle(0rem,2.8rem,1rem,1rem);
+					}
+				}
+				li:nth-child(4){
+					.ans-line{
+						@include setEle(1.1rem,4rem,8rem,1rem);
+					}
+					.optionsText,.answerIcon{
+						@include setEle(0rem,4rem,1rem,1rem);
+					}
+				}
+				li:hover{
+					border-color:green;
+				}
+                .liEnd{
+                    background:green;
+                }
+			}
+		}
+	}
+}
+quesArea:before,.quesArea:after{
+	display: "table";
+	content: "";
+}
+.quesArea:after{
+	clear: both;
+}
+
+.stu-list{
+	width:7.6rem;
+	height:1rem;
+	line-height:1rem;
+	border-radius:0.5rem;
+	padding:0 0.2rem;
+	background:#fff;
+	box-sizing:border-box;
+	position:absolute;
+	left:1rem;;
+	bottom:0.6rem;
+	box-shadow:0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+	display:flex;
+	color:#b4b4b5;
+	display:flex;
+	visibility: hidden;
+}
+.stuNameList{
+        font-size:0.3rem;
+        flex:1;
+        text-align:center;
+    .userName{
+        
+    }
+    .userAns{
+        padding:0 0.04rem;
+    }
+}
+.not-click{
+    cursor:not-allowed;
+}
+.tea .options{
+    cursor:not-allowed;
+}
+.right{
+	color:#57a300;
+}
+.wrong{
+	color:#f50b0b;
+}
+        
+
+

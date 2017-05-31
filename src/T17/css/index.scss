@@ -1,0 +1,136 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+.container{
+	background-image: url(../image/defaultBg.jpg);
+}
+.desc-visi{
+	    visibility: hidden;
+}
+.tg{
+	z-index: 999;
+}
+.title{
+	height: 1.3rem;
+}
+.stu{
+	width: 100%;
+	height: 100%
+}
+.tea{
+	width: 100%;
+	height: 100%
+}
+.stage{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	.dis-area{
+		@include setEle(1.45rem,.35rem,7.5rem,7.5rem);
+		border: .12rem #fff solid;
+		background: #faf6e0;
+		border-radius: 0.6rem;
+		overflow: hidden;
+		box-shadow: 0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+		img{
+			width: 100%;
+			height: 100%
+		}
+	}
+	.ans-area{
+		@include setEle(9.85rem,0.35rem,2.06rem,2.06rem);
+		line-height: 2.06rem;
+		border: .12rem transparent solid;
+		background: transparent;
+		border-radius: 0.8rem;
+		overflow: hidden;
+		text-align: center;
+		img{
+			//position: absolute;
+			vertical-align: middle;
+		}
+		i{
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.ansBot-area{
+		@extend .ans-area;
+		background: #fff;
+		border: .12rem #fff solid;
+		box-shadow: 0 0.32rem 0.38rem 0rem rgba(0,0,0,.15);
+	}
+}
+.ansButton-area{
+	width: 2.06rem;
+	height: 2.06rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    position: absolute;
+	left: 15.45rem;
+	top: 5.63rem;
+	.ans-btn{
+		width: 2.14rem;
+		height: 1.04rem;
+		border: 0.08rem #fff solid;
+		border-radius: 1.04rem;
+		background: #cdcdcd;
+		text-align: center;
+		line-height: 1.04rem;
+		color: #fff;
+		font-size: 0.48rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.allowSub{
+		background: #59a500;
+	}
+}
+.showName-area{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	width: 2.06rem;
+	height: 2.06rem;
+    position: absolute;
+	left: 15.45rem;
+	top: 5.63rem;
+	border: .12rem #fff solid;
+	background: #fff;
+	border-radius: 0.8rem;
+	.stuNameList{
+		width: 100%;
+		line-height: 0.4rem;
+		color: #cccccc;
+		font-size: .24rem;
+		font-weight: 600;
+		text-align: center;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+}
+.stuName-active{
+	color: #55a000!important;
+}
+.cover{
+	position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}

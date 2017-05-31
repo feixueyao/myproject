@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Wed May 10 2017 21:12:40 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+.container {
+  background-image: url(../image/bg.jpg); }
+
+.commom {
+  height: 2.57rem; }
+  .commom .desc {
+    background-color: #fff; }
+  .commom .title {
+    top: 1.02rem; }
+  .commom.no-title {
+    height: 1.84rem; }
+  .commom.no-article {
+    height: 3.65rem; }
+    .commom.no-article .title {
+      top: 1.32rem; }
+
+.stu, .tea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .stu article, .tea article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 15.6rem;
+    height: 2rem;
+    padding: 0 .6rem;
+    line-height: .4rem;
+    font-size: .32rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #333;
+    border-radius: .4rem;
+    background-color: #fff;
+    position: relative; }
+    .stu article .article-box, .tea article .article-box {
+      width: 14rem;
+      height: 2rem;
+      overflow: hidden;
+      position: relative; }
+      .stu article .article-box .article, .tea article .article-box .article {
+        position: relative;
+        -webkit-transition: .2s;
+        transition: .2s;
+        top: 0; }
+    .stu article .article-box.no-scroll, .tea article .article-box.no-scroll {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .stu article .article-btn, .tea article .article-btn {
+      display: none;
+      position: relative;
+      width: .45rem;
+      height: 1.11rem; }
+      .stu article .article-btn span, .tea article .article-btn span {
+        display: inline-block;
+        width: .45rem;
+        height: .45rem;
+        background-color: #4c4c4c;
+        border-radius: 100%;
+        position: relative;
+        cursor: pointer; }
+        .stu article .article-btn span img, .tea article .article-btn span img {
+          position: absolute;
+          width: .18rem;
+          height: .15rem;
+          left: .13rem; }
+      .stu article .article-btn span.disabled, .tea article .article-btn span.disabled {
+        opacity: .5;
+        cursor: default; }
+      .stu article .article-btn .btn-up, .tea article .article-btn .btn-up {
+        position: absolute;
+        top: 0; }
+        .stu article .article-btn .btn-up img, .tea article .article-btn .btn-up img {
+          top: .13rem; }
+      .stu article .article-btn .btn-down, .tea article .article-btn .btn-down {
+        position: absolute;
+        bottom: 0; }
+        .stu article .article-btn .btn-down img, .tea article .article-btn .btn-down img {
+          -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg);
+          top: .17rem; }
+    .stu article .sound, .tea article .sound {
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      position: absolute;
+      right: -.6rem;
+      top: .4rem;
+      background: url(../image/sound_bg.png) no-repeat center;
+      background-size: cover;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      cursor: pointer; }
+      .stu article .sound img, .tea article .sound img {
+        width: 100%;
+        height: 100%; }
+  .stu .problem-area, .tea .problem-area {
+    width: 100%;
+    height: 5.76rem;
+    position: relative;
+    margin-top: .32rem; }
+    .stu .problem-area .pic, .tea .problem-area .pic {
+      width: 100%;
+      height: 2.56rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .stu .problem-area .pic .item, .tea .problem-area .pic .item {
+        width: 2.56rem;
+        height: 2.56rem;
+        margin: 0 .8rem;
+        position: relative;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: .8rem;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15); }
+        .stu .problem-area .pic .item img, .tea .problem-area .pic .item img {
+          width: 2.32rem;
+          height: 2.32rem;
+          position: absolute;
+          top: 0.12rem;
+          left: 0.12rem;
+          border-radius: .7rem;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          background-color: #fff; }
+        .stu .problem-area .pic .item.true, .tea .problem-area .pic .item.true {
+          background-color: #56a200; }
+          .stu .problem-area .pic .item.true img, .tea .problem-area .pic .item.true img {
+            border: .09rem solid #fff; }
+        .stu .problem-area .pic .item.false, .tea .problem-area .pic .item.false {
+          background-color: #ff4b50; }
+          .stu .problem-area .pic .item.false img, .tea .problem-area .pic .item.false img {
+            border: .09rem solid #fff; }
+        .stu .problem-area .pic .item.faild, .tea .problem-area .pic .item.faild {
+          background-color: #ff4b50; }
+          .stu .problem-area .pic .item.faild img, .tea .problem-area .pic .item.faild img {
+            border: .09rem solid #fff; }
+        .stu .problem-area .pic .item.finish, .tea .problem-area .pic .item.finish {
+          background-color: #56a200; }
+          .stu .problem-area .pic .item.finish img, .tea .problem-area .pic .item.finish img {
+            border: .09rem solid #fff; }
+    .stu .problem-area .lineBox, .tea .problem-area .lineBox {
+      position: absolute;
+      width: 100%;
+      height: 1.72rem;
+      top: 2.56rem; }
+      .stu .problem-area .lineBox .line, .tea .problem-area .lineBox .line {
+        height: .1rem;
+        top: 0;
+        position: absolute; }
+        .stu .problem-area .lineBox .line div, .tea .problem-area .lineBox .line div {
+          width: .5rem;
+          height: .1rem;
+          position: absolute;
+          top: 0;
+          left: -0.5rem; }
+      .stu .problem-area .lineBox .line.true, .tea .problem-area .lineBox .line.true {
+        background-color: #56a200; }
+        .stu .problem-area .lineBox .line.true div, .tea .problem-area .lineBox .line.true div {
+          background-color: #56a200; }
+      .stu .problem-area .lineBox .line.false, .tea .problem-area .lineBox .line.false {
+        background-color: #ff4b50; }
+        .stu .problem-area .lineBox .line.false div, .tea .problem-area .lineBox .line.false div {
+          background-color: #ff4b50; }
+    .stu .problem-area .answers, .tea .problem-area .answers {
+      width: 100%;
+      height: .9rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 1.72rem;
+      position: relative;
+      margin-left: .07rem; }
+      .stu .problem-area .answers li, .tea .problem-area .answers li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 3.2rem;
+        height: .9rem;
+        margin: 0 0.48rem;
+        padding: 0 .2rem;
+        border: .09rem solid #fff;
+        border-radius: .9rem;
+        background-color: #fff;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-size: .36rem;
+        cursor: pointer;
+        font-weight: bold;
+        -webkit-box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0.32rem 0.38rem 0 rgba(0, 0, 0, 0.15); }
+        .stu .problem-area .answers li span, .tea .problem-area .answers li span {
+          max-width: 100%;
+          max-height: 100%;
+          word-wrap: break-word; }
+      .stu .problem-area .answers li.true, .tea .problem-area .answers li.true {
+        border: .09rem solid #56a200; }
+      .stu .problem-area .answers li.false, .tea .problem-area .answers li.false {
+        border: .09rem solid #ff4b50; }
+      .stu .problem-area .answers li.faild, .tea .problem-area .answers li.faild {
+        border: .09rem solid #ff4b50; }
+      .stu .problem-area .answers li.finish, .tea .problem-area .answers li.finish {
+        border: .09rem solid #56a200; }

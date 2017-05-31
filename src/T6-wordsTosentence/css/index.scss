@@ -1,0 +1,157 @@
+@import '../../common/css/reset.css';
+.desc-sec{
+	height: 0.76rem;
+}
+.container{
+	box-sizing: border-box;
+	font-family: 'Arial';
+	background-image: url('../image/bg.jpg')
+}
+.empty{
+	height: 0.76rem;
+}
+.flex-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.stu-content{
+	width: 100%;
+	height: 7.4rem;
+}
+.tea-content{
+	width: 100%;
+	height: 6.23rem;
+}
+// 左边内容：图片+声音按钮
+.content-l{
+	position: relative;
+	margin-right: 0.9rem;
+	.theme-pic{
+		box-sizing: border-box;
+		width: 3.6rem;
+		height: 3.6rem;
+		border-radius: 1rem;
+		border: 0.12rem solid #fff;
+	}
+	.btn-audio{
+		width: 1.2rem;
+		height: 1.2rem;
+		img{
+			width: 100%;
+		}
+	}
+}
+// 左边，图片+声音
+.img-audio-container{
+	.btn-audio{
+		position: absolute;
+		left: 100%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+// 右边：句子+单词
+.content-r{
+	.sentence{
+		box-sizing: border-box;
+		width: 13.5rem;
+		height: 1.42rem;
+		background: #fff;
+		border-radius: 0.4rem;
+		font-family: 'Arial';
+		font-size: 0.32rem;
+		color: #282828;
+		font-weight: bold;
+		padding: 0.2rem 0.4rem;
+		line-height: 0.46rem;
+		// word-wrap: break-word;
+		span{
+			cursor: pointer;
+			padding: 0 0.1rem;
+		}
+	}
+	.sentence.right{
+		color:#56a200;
+	}
+	.sentence.wrong{
+		color:#ff4848;
+	}
+	.words{
+		width: 13.5rem;
+		height: 1.9rem;
+		ul{
+			display: flex;
+			margin-top: 0.2rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		li{
+			padding: 0 0.3rem;
+			font-family: 'Arial';
+			font-size: 0.32rem;
+			font-weight: bold;
+			color: #56a200;
+			text-align: center;
+			line-height: 0.8rem;
+			background: #fff;
+			border-radius: 0.4rem;
+			margin-right: 0.2rem;
+			margin-bottom: 0.2rem;
+			cursor: pointer; 
+			box-shadow: 0 0.32rem 0.38rem 0rem rgba(0,0,0,.15);
+		}
+	}
+}
+.submit{
+	position: absolute;
+	left: 7.56rem;
+	top: 8.16rem;
+	width: 4.1rem;
+	height: 1.2rem;
+	border: 0.08rem solid #fff;
+	border-radius: 1.2rem;
+	background: #ccc;
+	font-size: 0.72rem;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	line-height: 1.2rem;
+	cursor: pointer;
+}
+.submit.active{
+	background: #56a200;
+}
+.tea-answers{
+	width: 18rem;
+	height: 3.21rem;
+	margin: 0 auto;
+	padding: 0.13rem 0;
+	background: rgba(0,0,0,.6);
+	border-radius: 0.4rem;
+	font-family: 'Arial';
+	font-size: 0.3rem;
+	font-weight: bold;
+	color: #fff;
+	li{
+		line-height: 0.84rem;
+		display: flex;
+	}
+	.name{
+		width: 2.2rem;
+		text-align: right;
+	}
+	.result{
+		width: 15.8rem;
+		text-align: left;
+		text-indent: 1em;
+	}
+	.name.correct{
+		color: #87ff00;
+	}
+	.name.error{
+		color:#ff8080;
+	}
+}

@@ -1,0 +1,68 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+/*reset reset.css*/
+
+.tg{z-index:100;}
+.desc{
+	overflow: hidden; text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.title{
+	height:1.8rem;
+	margin-top:0;
+}
+.title h3{
+	margin: 0.3rem 0;
+}
+.stage{
+	width: 100%;
+    height: 100%;
+    text-align: center;
+	.img-edge{
+		width: 19.20rem;
+		height: 7.6rem;
+		justify-content: center;
+		visibility: visible;
+		position: relative;
+		.img-show{
+			img{
+				// width:100%;
+			}
+		}
+	}
+}
+.audio{
+	width:1.08rem;
+	height:1.08rem;
+	position:absolute;
+	bottom:0.6rem;
+	right:1.18rem;
+	box-sizing:border-box;
+	img{
+		width:100%;
+		height:100%;
+	}
+	audio{
+	opacity:0;
+	}
+}
+.stu .startAudio{
+	width:0;
+	height:0;
+	visibility:hidden;
+}
+.stu .audio{
+	width:0;
+	height:0;
+	visibility:hidden;
+}
+
+

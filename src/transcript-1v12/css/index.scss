@@ -1,0 +1,187 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+@import '../../common/css/animate.min.css';//动画框架 https://github.com/daneden/animate.css
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+.container{
+	position: relative;
+	background: url('../image/bg.jpg') no-repeat center;
+	background-size:100% 100%;
+	.title{
+		margin:0 auto;
+		margin-top:1rem;
+		transform:translateX(-50%);
+		width:14.41rem;
+		height:1.37rem;
+		background:url('../image/title.png') no-repeat 0 0;
+		background-size:100% 100%;
+	}
+	.person_list{
+		position: absolute;
+		left:50%;
+		transform: translateX(-50%);
+		width:100%;
+		display: -webkit-box;
+		height:7.8rem;
+		-webkit-box-align:end;
+		li>div.score{
+			position:relative;
+			z-index:2;
+			width: 2.2rem;
+			overflow: hidden;
+			transition:width .8s  cubic-bezier(.83,-1.03,.22,1.72) .2s;
+		}
+		li.blue{
+			.score{
+				background:#34c700;
+			}
+		}
+		li.green{
+			.score{
+				background:#ff330b;
+			}
+		}
+		li.red{
+			.score{
+				background:#3289ff;
+			}
+		}
+		&>li{
+			-webkit-box-flex:1;
+			padding:0 .5rem;
+			.rank_container{
+				position: relative;
+				height: 2.18rem;
+				z-index:1;
+				.shanshan{
+					position: absolute;
+					left:-2.35rem;
+					top:-3.7rem;
+					height:9.14rem;
+					width:9.97em;
+					z-index:1;
+					background:url('../image/shanshanshan.png') no-repeat .914rem .997rem;
+					background-size:80% 80%;
+					-webkit-animation:circle 4s linear infinite;
+					opacity: 0;
+				}
+			}
+			.rank{
+				position:relative;
+				opacity: 0;
+				height:2.18rem;
+				width:1.72rem;
+				background: url('../image/rank.png') no-repeat;
+				background-size:300% 100%;
+				margin:0 auto;
+				z-index:2;
+			}
+			.rank_1{
+				background-position:0 0;
+			}
+			.rank_2{
+				background-position:-1.72rem 0;
+			}
+			.rank_3{
+				background-position:-3.44rem 0;
+			}
+			.score{
+				position: relative;
+				width:3.92rem;
+				height:.8rem;
+				border:0.06rem solid #fff;
+				border-radius:30px;
+				&>p{
+					float: left;
+					box-sizing: border-box;
+					height:.8rem;
+					width:4.1rem;
+					text-align: center;
+					line-height: .9rem;
+					font-size:.36rem;
+					font-weight: bold;
+					color:#fff;
+					padding-left:.3rem;
+				}
+				.det{
+					float: left;
+					height:.8rem;
+					width:.8rem;
+					background:url('../image/score.png') no-repeat 0 center;
+					background-size:75% 75%;
+					color:#fff;
+					font-size:.4rem;
+					line-height:.9rem;
+					text-indent:0.75rem;
+				}
+				span.isMe{
+					position: absolute;
+					right:-0.08rem;
+					bottom:-0.08rem;
+					width:.36rem;
+					height:.36rem;
+					background:url('../image/isMe.png') no-repeat center ;
+					background-size:100% 100%;
+				}
+			}
+			.user{
+				position: relative;
+				margin:0 auto;
+				margin-top:.2rem;
+				height:2rem;
+				width:2rem;
+				background: #fff;
+				border-radius:40px;
+				padding:.1rem;
+				text-align: center;
+				img{
+					height:1.6rem;
+					width:2rem;
+					outline:none;
+					vertical-align: bottom;
+					border-radius:40px 40px 0 0;
+				}
+				h4{
+					height:.4rem;
+					font-size:.18rem;
+					color:#52a200;
+					line-height:.4rem;
+				}
+			}
+			.star{
+				margin:0 auto;
+				margin-top:.44rem;
+				width:3.2rem;
+				li{
+					float: left;
+					height:.54rem;
+					width:.55rem;
+					margin:.08rem .125rem;
+					background: url('../image/star.png') no-repeat center ;	
+					background-size: 100% 100%;
+				}
+				
+			}
+		}
+		
+	}
+	.hide{
+		visibility: hidden;
+	}
+	 @keyframes circle{
+		0% {transform:rotate(0deg);}
+	
+		50% {transform:rotate(180deg);}
+
+		100% {transform:rotate(360deg);}
+
+	}
+
+
+}

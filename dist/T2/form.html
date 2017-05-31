@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eidt</title>
+	<link rel="stylesheet" href="form/css/style.css">
+	<script src='form/js/jquery-2.1.0.js'></script>
+	<script src='form/js/vue.min.js'></script>
+</head>
+<body>
+	<div id="container">
+		<div class="edit-form">
+			<div class="h-title">T2模板-判断</div>
+			<div class="c-group">
+				<div class="c-title">背景/标题</div>
+				<div class="c-area upload img-upload radio-group">
+					<div class="field-wrap">
+						<label class="field-label"  for="">上传图片</label><label for="bg-upload" class="btn btn-show upload" v-if="configData.bg==''?true:false">上传</label><label  for="bg-upload" class="btn upload re-upload" v-if="configData.bg!=''?true:false">重新上传</label><span class='txt-info'>（尺寸：1920X1080，大小：≤100KB）</span>
+						<input type="file"  v-bind:key="Date.now()" class="btn-file" id="bg-upload" size="1920*1080" volume="100" accept=".gif,.jpg,.jpeg,.png" v-on:change="imageUpload($event,configData,'bg')">
+					</div>
+					<div class="img-preview" v-if="configData.bg!=''?true:false">
+						<img v-bind:src="configData.bg" alt=""/>
+						<div class="img-tools">
+							<span class="btn btn-delete" v-on:click="configData.bg=''">删除</span>
+						</div>
+					</div>
+				</div>
+				<div class="c-area">
+					<label>标题 （显示位置：1）</label>
+					<input type="text" class='c-input-txt' placeholder="请在此输入描述" v-model="configData.desc">
+				</div>
+			</div>
+						<div class="c-group">
+				<div class="c-title">添加TG</div>
+				<div class="c-area">
+					<div class="c-well" v-for="(item,index) in configData.tg">
+						<div class="well-title">
+							<p>TG {{index+1}}</p>
+							<span class="dele-tg-btn" v-on:click="deleTg(item)"></span>
+						</div>
+						<div class="well-con">
+							<label>标题</label>
+							<input type="text" class='c-input-txt' placeholder="请在此输入TG标题" v-model="item.title">
+							<label>内容 <em>&nbsp;&nbsp;需换行位置输入“&lt;br&gt;”符号</em></label>
+							<textarea name="" cols="56" rows="2" placeholder="请在此输入TG内容" v-model="item.content"></textarea>
+						</div>
+					</div>
+					<button type="button" class="add-tg-btn" v-on:click="addTg" >+</button>
+				</div>
+			</div>
+			<div class="c-group">
+				<div class="c-title">编辑问题</div>
+				<div class="c-area upload img-upload">
+					<label>问题 （显示位置：2）字符：≤60</label>
+					<input type="text" class='c-input-txt' placeholder="请在此输入问题" maxlength="60" v-model="configData.source.title">
+					<label>单词 （显示位置：5）字符：≤68</label>
+					<input type="text" class='c-input-txt' placeholder="请在此输入文字" maxlength="68" v-model="configData.source.txt">
+					<div class="field-wrap">
+						<label class="field-label"  for="">上传图片</label><label for="img-upload" class="btn btn-show upload" v-if="configData.source.img==''?true:false">上传</label><label  for="img-upload" class="btn upload re-upload" v-if="configData.source.img!=''?true:false">重新上传</label><span class='txt-info'>（尺寸：500×500 ，大小：≤50KB）</span>
+						<input type="file"  v-bind:key="Date.now()" class="btn-file" id="img-upload" size="500*500" volume="50" accept=".gif,.jpg,.jpeg,.png" v-on:change="imageUpload($event,configData.source,'img')">
+					</div>
+					<div class="img-preview" v-if="configData.source.img!=''?true:false">
+						<img v-bind:src="configData.source.img" alt=""/>
+						<div class="img-tools">
+							<span class="btn btn-delete" v-on:click="configData.source.img=''">删除</span>
+						</div>
+					</div>
+					<div class="field-wrap">
+						<label class="field-label"  for="">上传声音</label><div class="audio-preview" v-show="configData.source.audio!=''?true:false">
+							<div class="audio-tools">
+								<p v-show="configData.source.audio!=''?true:false">{{configData.source.audio}}</p>
+								<img src="" alt="" v-show="configData.source.audio==''?true:false">
+							</div>
+							<span class="play-btn" v-on:click="play($event)">
+								<audio v-bind:src="configData.source.audio"></audio>
+							</span>
+						</div><span class="btn btn-audio-dele" v-show="configData.source.audio!=''?true:false" v-on:click="configData.source.audio=''">删除</span><label for="audio-upload" class="btn btn-show upload" v-if="configData.source.audio==''?true:false">上传</label><label  for="audio-upload" class="btn upload re-upload mar" v-if="configData.source.audio!=''?true:false">重新上传</label><span class='txt-info'>（大小：≤50KB）</span>
+						<input type="file" id='audio-upload' class="btn-file upload" volume="50" accept=".mp3" v-on:change="audioUpload($event,configData.source,'audio')" v-bind:key="Date.now()">
+					</div>
+					
+				</div>
+			</div>
+			<div class="c-group">
+				<div class="c-title">选项区域</div>
+				<div class="c-area">
+					<label  control-label>设置正确选项<em>*</em></label>
+					<div class="radio-mock">
+						<div class="field-tools" v-if="configData.source.key!==undefined?true:false" v-on:click>
+							<div class="field-radio-wrap radio ">
+								<div class="circle radio-outer " v-bind:class="{ active:configData.source.key=='True' }" v-on:click="configData.source.key= 'True'">
+									<div class="circle radio-inner pos-center" ></div>
+								</div>
+								<label class='field-label' for="true-radio">True</label>
+							</div>
+						</div>
+						<div class="field-tools" v-if="configData.source.key!==undefined?true:false" v-on:click>
+							<div class="field-radio-wrap radio ">
+								<div class="circle radio-outer " v-bind:class="{ active:configData.source.key=='False' }" v-on:click="configData.source.key= 'False'">
+									<div class="circle radio-inner pos-center" ></div>
+								</div>
+								<label class='field-label' for="false-radio">False</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="send-btn" v-on:click="onSend">提交</button>
+		</div>
+		<div class="edit-show">
+			<div class="show-fixed">
+				<div class="show-img">
+					<img src="form/img/preview.jpg?v=1494570905980" alt="">
+				</div>
+				<ul class="show-txt">
+					<li><em>图片格式：</em>JPG/PNG/GIF</li>
+					<li><em>声音格式：</em>MP3/WAV</li>
+					<li><em>视频格式：</em>MP4</li>
+					<li>带有“ * ”号为必填项</li>
+					<br>
+					<li><em>说明：</em></li>
+					<li>元素“5”文字超过34个字符，建议元素“2”不可上传。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script src='form/js/form.js?v=1494570905980'></script>
+</html>

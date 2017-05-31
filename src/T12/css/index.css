@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Fri May 26 2017 10:20:53 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+/*reset reset.css*/
+.tg {
+  z-index: 100; }
+
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.title {
+  height: 1.8rem;
+  margin-top: 0; }
+
+.title h3 {
+  margin: 0.3rem 0; }
+
+.stage {
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .stage .img-edge {
+    width: 19.20rem;
+    height: 7.6rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    visibility: visible;
+    position: relative; }
+
+.audio {
+  width: 1.08rem;
+  height: 1.08rem;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 1.18rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .audio img {
+    width: 100%;
+    height: 100%; }
+  .audio audio {
+    opacity: 0; }
+
+.stu .startAudio {
+  width: 0;
+  height: 0;
+  visibility: hidden; }
+
+.stu .audio {
+  width: 0;
+  height: 0;
+  visibility: hidden; }

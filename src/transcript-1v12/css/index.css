@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Wed May 24 2017 11:15:15 GMT+0800 (台北标准时间)
+ */
+@import url(../../common/css/reset.css);
+@import url(../../common/css/animation.css);
+@import url(../../common/css/animate.min.css);
+.container {
+  position: relative;
+  background: url("../image/bg.jpg") no-repeat center;
+  background-size: 100% 100%; }
+  .container .title {
+    margin: 0 auto;
+    margin-top: 1rem;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 14.41rem;
+    height: 1.37rem;
+    background: url("../image/title.png") no-repeat 0 0;
+    background-size: 100% 100%; }
+  .container .person_list {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    display: -webkit-box;
+    height: 7.8rem;
+    -webkit-box-align: end; }
+    .container .person_list li > div.score {
+      position: relative;
+      z-index: 2;
+      width: 2.2rem;
+      overflow: hidden;
+      -webkit-transition: width 0.8s cubic-bezier(0.83, -1.03, 0.22, 1.72) 0.2s;
+      transition: width 0.8s cubic-bezier(0.83, -1.03, 0.22, 1.72) 0.2s; }
+    .container .person_list li.blue .score {
+      background: #34c700; }
+    .container .person_list li.green .score {
+      background: #ff330b; }
+    .container .person_list li.red .score {
+      background: #3289ff; }
+    .container .person_list > li {
+      -webkit-box-flex: 1;
+      padding: 0 .5rem; }
+      .container .person_list > li .rank_container {
+        position: relative;
+        height: 2.18rem;
+        z-index: 1; }
+        .container .person_list > li .rank_container .shanshan {
+          position: absolute;
+          left: -2.35rem;
+          top: -3.7rem;
+          height: 9.14rem;
+          width: 9.97em;
+          z-index: 1;
+          background: url("../image/shanshanshan.png") no-repeat 0.914rem 0.997rem;
+          background-size: 80% 80%;
+          -webkit-animation: circle 4s linear infinite;
+          opacity: 0; }
+      .container .person_list > li .rank {
+        position: relative;
+        opacity: 0;
+        height: 2.18rem;
+        width: 1.72rem;
+        background: url("../image/rank.png") no-repeat;
+        background-size: 300% 100%;
+        margin: 0 auto;
+        z-index: 2; }
+      .container .person_list > li .rank_1 {
+        background-position: 0 0; }
+      .container .person_list > li .rank_2 {
+        background-position: -1.72rem 0; }
+      .container .person_list > li .rank_3 {
+        background-position: -3.44rem 0; }
+      .container .person_list > li .score {
+        position: relative;
+        width: 3.92rem;
+        height: .8rem;
+        border: 0.06rem solid #fff;
+        border-radius: 30px; }
+        .container .person_list > li .score > p {
+          float: left;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          height: .8rem;
+          width: 4.1rem;
+          text-align: center;
+          line-height: .9rem;
+          font-size: .36rem;
+          font-weight: bold;
+          color: #fff;
+          padding-left: .3rem; }
+        .container .person_list > li .score .det {
+          float: left;
+          height: .8rem;
+          width: .8rem;
+          background: url("../image/score.png") no-repeat 0 center;
+          background-size: 75% 75%;
+          color: #fff;
+          font-size: .4rem;
+          line-height: .9rem;
+          text-indent: 0.75rem; }
+        .container .person_list > li .score span.isMe {
+          position: absolute;
+          right: -0.08rem;
+          bottom: -0.08rem;
+          width: .36rem;
+          height: .36rem;
+          background: url("../image/isMe.png") no-repeat center;
+          background-size: 100% 100%; }
+      .container .person_list > li .user {
+        position: relative;
+        margin: 0 auto;
+        margin-top: .2rem;
+        height: 2rem;
+        width: 2rem;
+        background: #fff;
+        border-radius: 40px;
+        padding: .1rem;
+        text-align: center; }
+        .container .person_list > li .user img {
+          height: 1.6rem;
+          width: 2rem;
+          outline: none;
+          vertical-align: bottom;
+          border-radius: 40px 40px 0 0; }
+        .container .person_list > li .user h4 {
+          height: .4rem;
+          font-size: .18rem;
+          color: #52a200;
+          line-height: .4rem; }
+      .container .person_list > li .star {
+        margin: 0 auto;
+        margin-top: .44rem;
+        width: 3.2rem; }
+        .container .person_list > li .star li {
+          float: left;
+          height: .54rem;
+          width: .55rem;
+          margin: .08rem .125rem;
+          background: url("../image/star.png") no-repeat center;
+          background-size: 100% 100%; }
+  .container .hide {
+    visibility: hidden; }
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

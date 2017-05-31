@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Fri May 12 2017 14:36:25 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/animation.css);
+@import url(../../common/css/reset.css);
+.container {
+  background-image: url(../image/defaultBg.jpg); }
+
+.title h3 {
+  vertical-align: top; }
+
+.content-wrap {
+  height: -webkit-calc(100% - 2.32rem);
+  height: calc(100% - 2.32rem);
+  overflow: hidden; }
+
+.editor-wrap {
+  position: relative; }
+
+.mask-editor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: .6rem;
+  margin: auto;
+  width: -webkit-calc(100% - 2.8rem);
+  width: calc(100% - 2.8rem);
+  text-align: center;
+  height: 3rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: .5rem; }
+
+.mask-editor.hide {
+  display: none; }
+
+.letter-code-sheet {
+  text-align: center;
+  font-size: 0;
+  margin: 0.5rem auto;
+  width: -webkit-calc(100% - 2.8rem);
+  width: calc(100% - 2.8rem); }
+  .letter-code-sheet li.letter-code {
+    width: 1rem;
+    height: 1.5rem;
+    display: inline-block;
+    margin: 0.1rem 0.12rem;
+    background-color: white;
+    -webkit-box-shadow: 0 0.24rem 0.4rem 0 rgba(0, 0, 0, 0.22);
+            box-shadow: 0 0.24rem 0.4rem 0 rgba(0, 0, 0, 0.22);
+    border-radius: 0.3rem;
+    padding: 0.06rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    cursor: pointer; }
+  .letter-code-sheet .letter-code-layout {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+  .letter-code-sheet span.letter {
+    height: 0.75rem;
+    display: inline-block;
+    line-height: 0.75rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.30rem;
+    color: #59a500; }
+  .letter-code-sheet span.code {
+    position: absolute;
+    width: -webkit-calc(100%);
+    width: calc(100%);
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    font-size: 0.3rem;
+    color: white;
+    line-height: 0.65rem;
+    background-color: #59a500;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem; }
+  .letter-code-sheet .letter-code {
+    width: 1rem;
+    height: 1.5rem;
+    font-size: 0.2rem;
+    display: inline-block; }
+
+.letter-code-editor {
+  border-radius: 0.6rem;
+  font-size: 0;
+  margin: 0.5rem auto;
+  text-align: center;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem 0;
+  background-color: white;
+  width: -webkit-calc(100% - 2.8rem);
+  width: calc(100% - 2.8rem);
+  overflow: hidden; }
+  .letter-code-editor li.letter-code {
+    width: .5rem;
+    height: 1.3rem;
+    display: inline-block;
+    margin: 0.1rem 0.06rem;
+    background-color: white;
+    padding: 0.06rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative; }
+    .letter-code-editor li.letter-code.default .code {
+      color: black; }
+    .letter-code-editor li.letter-code.done .code {
+      color: black !important; }
+    .letter-code-editor li.letter-code.process .code::after {
+      -webkit-animation: flash 1.3s infinite;
+              animation: flash 1.3s infinite;
+      border-color: green; }
+  .letter-code-editor .letter-code-layout {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+  .letter-code-editor span.letter {
+    height: 0.4rem;
+    display: inline-block;
+    line-height: 0.4rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.22rem;
+    color: #59a500; }
+  .letter-code-editor span.code {
+    position: absolute;
+    width: -webkit-calc(100%);
+    width: calc(100%);
+    left: 0;
+    bottom: 20%;
+    height: 45%;
+    text-align: center;
+    font-size: 0.25rem;
+    color: white;
+    line-height: 0.48rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem; }
+  .letter-code-editor .code::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-bottom: 0.08rem #e4e4e4 solid;
+    position: absolute;
+    border-radius: 0.5rem;
+    left: 0;
+    bottom: 0; }
+
+@-webkit-keyframes flash {
+  0%, 100%, 50% {
+    opacity: 1; }
+  25%, 75% {
+    opacity: 0; } }
+
+@keyframes flash {
+  0%, 100%, 50% {
+    opacity: 1; }
+  25%, 75% {
+    opacity: 0; } }
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash; }
+
+.layout-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  font-size: 0;
+  bottom: -.5rem;
+  text-align: center; }
+  .layout-bottom .layout-squ {
+    width: 1.2rem;
+    height: 1.20rem;
+    display: inline-block;
+    border: .08rem solid white;
+    background-color: #b4df3f;
+    border-radius: .4rem;
+    line-height: 1.12rem;
+    color: white;
+    font-size: initial;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: .1rem; }
+
+.answer.error .layout-squ {
+  background-color: #ff4a4a; }
+
+.answer.right .layout-squ {
+  background-color: #b4df3f; }
+
+.layout-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  font-size: 0;
+  bottom: -.5rem;
+  text-align: center; }
+  .layout-bottom .layout-squ {
+    width: 1.2rem;
+    height: 1.20rem;
+    display: inline-block;
+    border: .08rem solid white;
+    background-color: #b4df3f;
+    border-radius: .4rem;
+    line-height: 1.12rem;
+    color: white;
+    font-size: initial;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: .1rem; }
+
+.answer.error .layout-squ {
+  background-color: #ff4a4a; }
+
+.answer.right .layout-squ {
+  background-color: #b4df3f; }

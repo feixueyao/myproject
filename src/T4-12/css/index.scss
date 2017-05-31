@@ -1,0 +1,294 @@
+@import '../../common/css/reset.css';
+@import '../../common/css/animation.css';
+
+@mixin setEle($l:0rem,$t:0rem,$w:0rem,$h:0rem){
+	position: absolute;
+	left: $l;
+	top: $t;
+	width: $w;
+	height: $h;
+}
+.container {
+	background-image: url(../image/bg.jpg);
+}
+.commom {
+	height: 2.57rem;
+
+	.desc {
+		background-color: #fff;
+	}
+
+	.title {
+		top: 1.02rem;
+	}
+
+	&.no-title {
+		height: 1.84rem;
+	}
+
+	&.no-article {
+		height: 3.65rem;
+		.title {
+			top: 1.32rem;
+		}
+	}
+}
+
+.stu, .tea {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 15.6rem;
+		height: 2rem;
+		padding: 0 .6rem;
+		line-height: .38rem;
+		font-size: .32rem;
+		box-sizing: border-box;
+		color: #333;
+		border-radius: .4rem;
+		background-color: #fff;
+		position: relative;
+
+		.article-box {
+			width: 14rem;
+			height: 2rem;
+			overflow: hidden;
+			position: relative;
+			.article {
+				position: relative;
+				transition: .2s;
+				top: 0;
+				line-height: .5rem;
+			}
+		}
+		.article-box.no-scroll {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.article-btn {
+			display: none;
+			position: relative;
+			width: .45rem;
+			height: 1.11rem;
+			span {
+				display: inline-block;
+				width: .45rem;
+				height: .45rem;
+				background-color: #4c4c4c;
+				border-radius: 100%;
+				position: relative;
+				cursor: pointer;
+
+				img {
+					position: absolute;
+					width: .18rem;
+					height: .15rem;
+					left: .13rem;
+				}
+			}
+
+			span.disabled {
+				opacity: .5;
+				cursor: default;
+			}
+
+			.btn-up {
+				position: absolute;
+				top: 0;
+				img {
+					top: .13rem;
+				}
+			}
+			.btn-down {
+				position: absolute;
+				bottom: 0;
+				img {
+					transform: rotate(180deg);
+					top: .17rem;
+				}
+			}
+		}
+
+		.sound {
+			display: block;
+			width: 1.2rem;
+			height: 1.2rem;
+			position: absolute;
+			right: -.6rem;
+			top: .4rem;
+			background: url(../image/sound_bg.png) no-repeat center;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			// .play {
+			// 	display: inline-block;
+			// 	width: .54rem;
+			// 	height: .46rem;
+			// 	background: url(../image/sound.png) no-repeat center;
+			// 	background-size: cover;
+			// }
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.problem-area {
+		width: 100%;
+		height: 5.76rem;
+		position: relative;
+		margin-top: .32rem;
+
+		.pic {
+			width: 100%;
+			height: 2.56rem;
+			display: flex;
+			justify-content: center;
+			// position: absolute;
+			// top: 0;
+
+			.item {
+				width: 2.56rem;
+				height: 2.56rem;
+				margin: 0 .8rem;
+				position: relative;
+				z-index: 10;
+				// border: .12rem solid #56a200;
+				background-color: #fff;
+				border-radius: .8rem;
+				box-sizing: border-box;
+				cursor: pointer;
+				box-shadow: 0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+
+				img {
+					width: 2.32rem;
+					height: 2.32rem;
+					position: absolute;
+					top: 0.12rem;
+					left: 0.12rem;
+					// border: .09rem solid #fff;
+					border-radius: .7rem;
+					box-sizing: border-box;
+					background-color: #fff;
+				}
+
+				&.true {
+					background-color: #56a200;
+					img {
+						border: .09rem solid #fff;
+					}
+				}
+
+				&.false {
+					background-color: #ff4b50;
+					img {
+						border: .09rem solid #fff;
+					}
+				}
+
+				&.faild {
+					background-color: #ff4b50;
+					img {
+						border: .09rem solid #fff;
+					}
+				}
+
+				&.finish {
+					background-color: #56a200;
+					img {
+						border: .09rem solid #fff;
+					}
+				}
+
+			}
+		}
+		.lineBox {
+			position: absolute;
+			width: 100%;
+			height: 1.72rem;
+			top: 2.56rem;
+			.line {
+				height: .1rem;
+				top: 0;
+				position: absolute;
+				div {
+					width: .5rem;
+					height: .1rem;
+					position: absolute;
+					top: 0;
+					left: -0.5rem;
+				}
+			}
+			.line.true {
+				background-color: #56a200;
+				div {
+					background-color: #56a200;
+				}
+			}
+			.line.false {
+				background-color: #ff4b50;
+				div {
+					background-color: #ff4b50;
+				}
+			}
+		}
+		.answers {
+			width: 100%;
+			height: .9rem;
+			display: flex;
+			justify-content: center;
+			margin-top: 1.72rem;
+			position: relative;
+			margin-left: .07rem;
+			// top: 4.86rem;
+
+			li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 3.2rem;
+				height: .9rem;
+				margin: 0 0.48rem;
+				padding: 0 .2rem;
+				border: .09rem solid #fff;
+				border-radius: .9rem;
+				background-color: #fff;
+				box-sizing: border-box;
+				font-size: .36rem;
+				cursor: pointer;
+				font-weight: bold;
+				box-shadow: 0 0.32rem 0.38rem 0 rgba(0,0,0,.15);
+				span {
+					max-width: 100%;
+					max-height: 100%;
+					word-wrap: break-word;
+				}
+			}
+			li.true {
+				border: .09rem solid #56a200;
+			}
+			li.false {
+				border: .09rem solid #ff4b50;
+			}
+
+			li.faild {
+				border: .09rem solid #ff4b50;
+			}
+
+			li.finish {
+				border: .09rem solid #56a200;
+			}
+		}
+	}
+}

@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Fri Apr 21 2017 18:17:08 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+.container {
+  background-image: url("../image/bg.jpg"); }
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.sec-middle {
+  width: 100%;
+  height: 6.96rem; }
+
+.content {
+  position: relative;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 1rem; }
+
+.theme-pic {
+  width: 3.6rem;
+  height: 3.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.12rem solid #fff;
+  border-radius: 1rem; }
+
+.btn-audio {
+  width: 1.2rem;
+  height: 1.2rem; }
+  .btn-audio img {
+    width: 100%; }
+
+.img-audio-container .btn-audio {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.avatars {
+  width: 100%;
+  height: 3rem; }
+  .avatars ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .avatars li {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 2.56rem;
+    height: 2.56rem;
+    border: 0.12rem solid #fff;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+    overflow: hidden; }
+    .avatars li img {
+      width: 100%; }
+  .avatars .name {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0.6rem;
+    bottom: 0;
+    background: #fff;
+    color: #55a000;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.24rem;
+    font-family: 'Arial';
+    font-weight: bold; }
+  .avatars .absence {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8); }
+
+.bomb {
+  position: absolute;
+  z-index: 99;
+  width: 2.28rem;
+  height: 3.14rem;
+  left: 5.08rem;
+  top: 3.05rem;
+  text-align: center;
+  cursor: pointer; }
+  .bomb .bomb-img {
+    height: 2.5rem;
+    line-height: 2.5rem; }
+    .bomb .bomb-img img {
+      width: 1.57rem;
+      height: 2.27rem;
+      vertical-align: middle; }
+  .bomb .bomb-gif {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0; }
+  .bomb .btn {
+    width: 100%;
+    height: 0.74rem; }
+  .bomb .btn.start {
+    background: url("../image/start.png") center center;
+    background-size: 100% 100%; }
+  .bomb .btn.stop {
+    background: url("../image/stop.png") center center;
+    background-size: 100% 100%; }
+  .bomb .count-down {
+    position: absolute;
+    z-index: 9;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2.27rem;
+    text-align: center;
+    line-height: 3.3rem;
+    color: #fff;
+    font-size: 0.36rem;
+    font-weight: 'bold';
+    font-family: Arial; }
+
+.bomb.drop-down .bomb-img img {
+  width: 0.9rem;
+  height: 1.28rem; }
+
+.bomb.drop-down .count-down {
+  line-height: 3.1rem; }
+
+.beat {
+  -webkit-animation: beat 0.72s ease infinite;
+          animation: beat 0.72s ease infinite; }
+
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); } }
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); } }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=1800">
+    <title>T6-12(<%= new Date().getFullYear()%>-<%= new Date().getMonth()+1 %>-<%= new Date().getDate() %>)</title>
+    <script src="../../jquery-2.1.1.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+          document.write('<script src="/assets/js/jquery/2.1.1/jquery.min.js"><\/script>')
+      } 
+    </script>
+    <script src="js/sdk.js?v=<%=new Date().getTime()%>"></script>
+    <script src="js/fit.js?v=<%=new Date().getTime()%>"></script>
+    <link rel="stylesheet" href="css/index.css?v=<%=new Date().getTime()%>">
+</head>
+<body>
+<div class="container" id="container" data-syncresult="show-result-1">
+
+    <section class="commom">
+        <div class="desc-sec">
+            <div class="desc hide"></div>
+        </div>
+        <div class="title hide">
+            <h3></h3>
+        </div> 
+    </section>
+
+    <section class="stu hide">
+        <div class="stu-content flex-box">
+           <div class="content-l">
+               <img src="" alt="" class="theme-pic hide shadow">
+               <div class="btn-audio hide" data-syncactions="btn-audio-1">
+                   <img src="image/btn-audio.png" alt="">
+               </div>
+           </div>
+           <div class="content-r">
+               <div class="sentence"></div>
+               <div class="words">
+                 <ul></ul>
+               </div>
+               <div class="icon hide"></div>
+           </div>
+        </div>
+        <div class="submit shadow" data-syncactions="submit-1">Submit</div>
+        <div class="answer hide">answer: <span></span></div>
+    </section>
+    
+    <section class="tea hide" data-syncresult="t-1">
+        <div id="tg"></div>
+        <div class="show-result"></div>
+        <div class="tea-content flex-box">
+            <div class="content-l">
+                <img src="" class="theme-pic shadow hide">
+                <div class="btn-audio hide" data-syncactions="btn-audio-1">
+                    <img src="image/btn-audio.png">
+                </div>
+            </div>
+            <div class="content-r">
+               <div class="sentence"></div>
+               <div class="words"><ul></ul></div>
+           </div>
+        </div>
+        <div class="submit shadow">Submit</div>
+        <div class="answer">answer:<span></span></div>
+    </section>
+
+    <audio src=""></audio>
+
+</div>
+
+<script type="text/javascript" src="content.js?v=<%=new Date().getTime()%>"></script>
+<script type="text/javascript" src="js/index.js?v=<%=new Date().getTime()%>"></script>
+</body>
+</html>

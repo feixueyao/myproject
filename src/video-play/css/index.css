@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/*!
+ * 
+ * copyright (c) 2016 innovation
+ * author: windsolider
+ * update: Mon Apr 10 2017 16:00:55 GMT+0800 (中国标准时间)
+ */
+@import url(../../common/css/reset.css);
+.sub-title span {
+  display: inline-block;
+  height: 0.6rem;
+  padding: 0 0.3rem;
+  border-radius: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.btn-play {
+  position: absolute;
+  left: 0.3rem;
+  top: 8.92rem;
+  width: 1.58rem;
+  height: 1.58rem;
+  z-index: 99;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
+  .btn-play img {
+    width: 1.58rem;
+    height: 1.58rem; }
+
+.bigger {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); }
